@@ -14,8 +14,10 @@
 
 @interface GameScene : CCLayer {
     CCSprite * backGround;
+    CCSprite * zombie11;
 }
 @property(nonatomic,retain)CCSprite * backGround;
+@property(nonatomic,retain)CCSprite * zombie11;
 +(CCScene *) scene;
 
 -(void) addZombies;

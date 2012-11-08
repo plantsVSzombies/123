@@ -155,6 +155,7 @@
 		0FAD73471649F36E0028FE18 /* zombies_type.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAD73321649F36E0028FE18 /* zombies_type.png */; };
 		0FAD7363164A04990028FE18 /* CCAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD7362164A04990028FE18 /* CCAnimationHelper.m */; };
 		0FAD7373164A463A0028FE18 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAD7372164A463A0028FE18 /* IntroLayer.m */; };
+		0FB526A1164B9712004785E1 /* GameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB526A0164B9712004785E1 /* GameMenu.m */; };
 		0FDFAF8C164B5DA300D07A31 /* Plant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFAF87164B5DA300D07A31 /* Plant.m */; };
 		0FDFAF8D164B5DA300D07A31 /* Zombies.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFAF89164B5DA300D07A31 /* Zombies.m */; };
 		0FDFAF8E164B5DA300D07A31 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FDFAF8B164B5DA300D07A31 /* Bullet.m */; };
@@ -447,6 +448,8 @@
 		0FAD7362164A04990028FE18 /* CCAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAnimationHelper.m; sourceTree = "<group>"; };
 		0FAD7371164A463A0028FE18 /* IntroLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		0FAD7372164A463A0028FE18 /* IntroLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		0FB5269F164B9712004785E1 /* GameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMenu.h; sourceTree = "<group>"; };
+		0FB526A0164B9712004785E1 /* GameMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMenu.m; sourceTree = "<group>"; };
 		0FDFAF86164B5DA300D07A31 /* Plant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plant.h; sourceTree = "<group>"; };
 		0FDFAF87164B5DA300D07A31 /* Plant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plant.m; sourceTree = "<group>"; };
 		0FDFAF88164B5DA300D07A31 /* Zombies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zombies.h; sourceTree = "<group>"; };
@@ -924,6 +927,8 @@
 				0FAD7372164A463A0028FE18 /* IntroLayer.m */,
 				0FAD730E1649F3370028FE18 /* MainScene.h */,
 				0FAD730F1649F3370028FE18 /* MainScene.m */,
+				0FB5269F164B9712004785E1 /* GameMenu.h */,
+				0FB526A0164B9712004785E1 /* GameMenu.m */,
 				0FDFAF90164B5DDD00D07A31 /* GameScene.h */,
 				0FDFAF91164B5DDD00D07A31 /* GameScene.m */,
 				0FDFAF86164B5DA300D07A31 /* Plant.h */,
@@ -1139,6 +1144,7 @@
 				0FDFAF8D164B5DA300D07A31 /* Zombies.m in Sources */,
 				0FDFAF8E164B5DA300D07A31 /* Bullet.m in Sources */,
 				0FDFAF92164B5DDD00D07A31 /* GameScene.m in Sources */,
+				0FB526A1164B9712004785E1 /* GameMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

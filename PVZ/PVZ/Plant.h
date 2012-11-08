@@ -21,7 +21,10 @@ typedef enum
 }PlantType;//植物的类型
 @interface Plant : CCSprite {
     PlantType type;//植物类型
-    CCAction *addPlant;//添加植物的动画
+    bool isHiting;
+    CCAction *path;//添加植物的动画
 }
+-(void)addPath;
+-(void)move;
 
 @end

@@ -9,6 +9,7 @@
 
 #import "MainScene.h"
 #import "GameScene.h"
+#import "GameMenu.h"
 #import "AppDelegate.h"
 
 #pragma mark - MainScene
@@ -65,7 +66,7 @@
     [rool removeFromParentAndCleanup:NO];
     [loadingLabel removeFromParentAndCleanup:NO];
     [CCMenuItemFont setFontName:@"Helvetica-BoldOblique"];
-    [CCMenuItemFont setFontSize:20];
+    [CCMenuItemFont setFontSize:16];
     CCMenuItemFont* itemStart = [CCMenuItemFont itemFromString:@"点击开始游戏" target:self selector:@selector(startGame)];
     CCMenu *menu = [CCMenu menuWithItems:itemStart, nil];
     [menu setPosition:ccp( 240, 23)];
@@ -75,7 +76,7 @@
 -(void)startGame
 {
     NSLog(@"start...");
-    CCTransitionProgressRadialCW *jumoZoom = [CCTransitionProgressRadialCW transitionWithDuration:1 scene:[GameScene scene]];
+    CCTransitionProgressRadialCW *jumoZoom = [CCTransitionProgressRadialCW transitionWithDuration:1 scene:[GameMenu scene]];
 
     [[CCDirector sharedDirector] pushScene:jumoZoom];
 }

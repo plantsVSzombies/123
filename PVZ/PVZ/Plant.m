@@ -10,5 +10,12 @@
 
 
 @implementation Plant
+-(void)addPath
+{
 
+}
+-(void)move
+{
+
+}
 @end
