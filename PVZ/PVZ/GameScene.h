@@ -18,4 +18,7 @@
 @property(nonatomic,retain)CCSprite * backGround;
 +(CCScene *) scene;
 
+-(void) addZombies;
+-(void) updateGame:(ccTime)delta;
+
 @end

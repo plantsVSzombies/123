@@ -20,7 +20,7 @@ typedef enum
     bool isHiting;//判断是否被击中
     CCAction *addZombie;
 }
--(void) addZombie;//加僵尸
--(void)moveWithParabola:(CCSprite*)mSprite startP:(CGPoint)startPoint endP:(CGPoint)endPoint startA:(float)startAngle endA:(float)endAngle dirTime:(float)time;//僵尸的移动
+-(void) addPath;//加僵尸行走路线
+-(void)moveWithParabola:(CCSprite*)mSprite startP:(CGPoint)startPoint endP:(CGPoint)endPoint dirTime:(float)time;//僵尸的移动
 
 @end
