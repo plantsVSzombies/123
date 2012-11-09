@@ -10,7 +10,7 @@
 #import "CCAnimationHelper.h"
 
 @implementation Zombies
--(void) addPath//加僵尸行走路线
+-(void)addPath//加僵尸行走路线
 {
 //    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"zombies_type.plist"];
 //
@@ -61,7 +61,7 @@
 //    CCSprite * mSprite = [CCSprite spriteWithSpriteFrameName:@"zombie001.png"];
 //    [mSprite runAction:repeat];
     mSprite.position = startPoint;
-//    [self addChild:zombie];
+
     
     [mSprite runAction:[CCMoveTo actionWithDuration:time position:endPoint]];
 }

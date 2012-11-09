@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "Zombies.h"
 #import "CCAnimationHelper.h"
+
 @implementation GameScene
 @synthesize backGround;
 @synthesize zombie11;
@@ -150,19 +151,94 @@
         [self schedule:@selector(delayTwoSecondsToMove) interval:2 repeat:0 delay:0];
 
 
+        [self schedule:@selector(updateGame:) interval:10];
+
         
 	}
 	return self;
 }
 
 
+
 -(void) addZombies
 {
     
+    [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"zombies_type.plist"];
+    
+    int type = rand()%10;
+    
+    if (type<5)
+    {
+        
+        CCAnimation *anim = [CCAnimation animationWithFrame:@"zombie" frameCount:22 delay:0.08f];
+        CCAnimate* animate = [CCAnimate actionWithAnimation:anim]; 
+        CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate]; 
+        Zombies * zombie = [Zombies spriteWithSpriteFrameName:@"zombie001.png"];
+        [zombie runAction:repeat];
+        
+        
+         [zombie addPath];
+        [self addChild:zombie];
+        
+    }
+    else
+    {
+        
+        if ( type < 7)
+        {
+            
+            CCAnimation *anim = [CCAnimation animationWithFrame:@"FlagZombie" frameCount:12 delay:0.08f];
+            CCAnimate* animate = [CCAnimate actionWithAnimation:anim]; 
+            CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate]; 
+            Zombies * zombie = [Zombies spriteWithSpriteFrameName:@"FlagZombie001.png"];
+            [zombie runAction:repeat];
+            
+            
+             [zombie addPath];
+            [self addChild:zombie];
+            
+        }
+        else
+        {
+            if (type < 9)
+            {
+                
+                CCAnimation *anim = [CCAnimation animationWithFrame:@"ConeheadZombie" frameCount:21 delay:0.08f];
+                CCAnimate* animate = [CCAnimate actionWithAnimation:anim]; 
+                CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate]; 
+                Zombies * zombie = [Zombies spriteWithSpriteFrameName:@"ConeheadZombie001.png"];
+                [zombie runAction:repeat];
+                
+                
+                 [zombie addPath];
+                [self addChild:zombie];
+                
+            }
+            else
+            {
+                if (type == 9)
+                {
+                    CCAnimation *anim = [CCAnimation animationWithFrame:@"BucketheadZombie" frameCount:15 delay:0.08f];
+                    CCAnimate* animate = [CCAnimate actionWithAnimation:anim]; 
+                    CCRepeatForever* repeat = [CCRepeatForever actionWithAction:animate]; 
+                    Zombies * zombie = [Zombies spriteWithSpriteFrameName:@"BucketheadZombie001.png"];
+                    [zombie runAction:repeat];
+                    
+                    
+                    [zombie addPath];
+                    [self addChild:zombie];
+                }
+            }
+        }
+    }
+    
 }
+
+
 -(void) updateGame:(ccTime)delta
 {
-    
+    NSLog(@"1111");
+    [self addZombies];
 }
 
 
@@ -190,11 +266,10 @@
     [self initDetailZombies];
     
 
-    [self schedule:@selector(addZombie) interval:2 repeat:0 delay:0];
-    [self schedule:@selector(updateGame:) interval:0.05];
+//    [self schedule:@selector(addZombie) interval:2 repeat:0 delay:0];
 
 
-    [self schedule:@selector(addZombie) interval:5 repeat:0 delay:0];
+    [self schedule:@selector(addZombies) interval:5 repeat:0 delay:0];
         
 
 }
